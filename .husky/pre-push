@@ -1,0 +1,3 @@
+# 푸시 전 전체 검증 (빌드 포함)
+echo "🚀 푸시 전 전체 검증..."
+bash scripts/verify-task.sh
