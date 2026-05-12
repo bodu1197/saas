@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash scripts/hook-pre-push.sh",
+            "timeout": 600,
+            "statusMessage": "푸시 전 8단계 검증 중..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash scripts/hook-post-commit.sh",
+            "timeout": 10,
+            "statusMessage": "커밋 후 알림 확인..."
+          }
+        ]
+      }
+    ]
+  }
+}
