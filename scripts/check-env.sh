@@ -8,9 +8,9 @@ set -e
 ENV_FILE=".env.local"
 
 if [ ! -f "$ENV_FILE" ]; then
-  echo "❌ $ENV_FILE 파일이 없습니다."
-  echo "   docs/infrastructure.md의 '로컬 개발 환경 셋업'을 참조하세요."
-  exit 1
+  echo "⚠️  $ENV_FILE 파일이 없습니다. (초기 셋업 단계에서는 정상)"
+  echo "   Supabase 프로젝트 생성 후 docs/infrastructure.md를 참조하세요."
+  exit 0
 fi
 
 # 필수 변수 목록 (docs/infrastructure.md와 일치해야 함)
